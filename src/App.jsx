@@ -14,11 +14,11 @@ function App() {
       intervalId = setInterval(() => {
         if (seconds === 0) {
           if (minutes === 0) {
-            if (sessionType === 'Work') {
-              setSessionType('Break');
+            if (sessionType === 'Work: ') {
+              setSessionType('Break: ');
               setMinutes(5);
             } else {
-              setSessionType('Work');
+              setSessionType('Work: ');
               setMinutes(25); 
             }
           } else {
@@ -40,7 +40,7 @@ function App() {
 
   const resetTimer = () => {
     setIsActive(false);
-    setSessionType('Work');
+    setSessionType('Work: ');
     setMinutes(25);
     setSeconds(0);
   };
